@@ -1,0 +1,52 @@
+
+.column-r {
+  float: left;
+  width: 33.3%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row-r {
+  margin: 0 -5px;
+
+}
+
+/* Clear floats after the columns */
+.row-r:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column-r {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card-r {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 25px;
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  transition: 0.5s ease;
+  cursor: pointer;
+  margin:30px;
+
+
+}
+.center-r {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.card-r:hover {
+  transform: scale(1.15);
+  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
