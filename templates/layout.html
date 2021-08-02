@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/ysoftaoglu/GradientButtons/master/gradient-buttons/gradient-buttons.min.css"/>
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/images/favicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <link href="/static/button.css" rel="stylesheet">
+        <link href="/static/jobs.css" rel="stylesheet">
+        <link href="/static/events.css" rel="stylesheet">
+        <link href="/static/status.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <title>Clean-G: {% block title %}{% endblock %} </title>
+    </head>
+
+    <body onload="myFunction()">
+
+
+
+    <div id="loader"></div>
+
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light ">
+            <a class="navbar-brand mt-2" href="/"><img src="/static/header.jpg" style="width:270px;height:100px;"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                {% if session.user_id %}
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><font size=4>Home</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vision"><font size=4>Vision</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events"><font size=4>Events</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services"><font size=4>Services</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recruit"><font size=4>Recruit</font></a>
+                </li>
+
+              </ul>
+
+              <ul class="navbar-nav ml-auto mx-4">
+                <li class="nav-item"><a class="nav-link" href="/history"><button type="button" class="btn btn-outline-success" ><i class="fas fa-history"></i> View Your Orders</button></a></li>
+                <li class="nav-item"><a class="nav-link" href="/order"><button type="button" class="btn btn-outline-success" ><i class="fas fa-receipt"></i> Request a Order</button></a></li>
+                <li class="nav-item"><a class="nav-link" href="#"><button type="button" class="btn btn-outline-success" ><i class="fas fa-user"></i>{{ session["username"] }}</button></a></li>
+                <li class="nav-item"><a class="nav-link" href="/logout"><button type="button" class="btn btn-outline-success"><i class="fas fa-sign-out-alt"></i> Log Out&nbsp;</button></a></li>
+
+              </ul>
+              {% else %}
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><font size=4>Home</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/vision"><font size=4>Vision</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/events"><font size=4>Events</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/services"><font size=4>Services</font></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recruit"><font size=4>Recruit</font></a>
+                </li>
+
+              </ul>
+
+              <ul class="navbar-nav ml-auto mx-4">
+                <li class="nav-item"><a class="nav-link" href="/order"><button type="button" class="btn btn-outline-success" ><i class="fas fa-receipt"></i> Request a Order</button></a></li>
+                <li class="nav-item"><a class="nav-link" href="/login"><button type="button" class="btn btn-outline-success" ><i class="fas fa-user"></i> Log In &nbsp;</button></a></li>
+                <li class="nav-item"><a class="nav-link" href="/register"><button type="button" class="btn btn-outline-success"><i class="fas fa-lock"></i> Register&nbsp;</button></a></li>
+
+              </ul>
+
+              {% endif %}
+
+
+            </div>
+
+        </nav>
+
+{% block main %} {% endblock %}
+
+
+
+
+<div class="rowb">
+  <div class="columnb" style="background-color:#228B22;text-align:center;">
+      <br>
+    <h2 style="color:white;">◉ CLEAN-G OFFICES </h2>
+    <br>
+    <p><iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21323.247260020456!2d72.86170790721671!3d19.131630139221393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2sid!4v1602925745553!5m2!1sen!2sid" width="380" height="280" frameborder="0" style="border:2px black dashed;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </p>
+  </div>
+  <div class="columnb" style="background-color:#228B22;text-align:center;">
+      <br>
+    <h2 style="color:white;">◉  GET IN TOUCH</h2><br>
+    <p style="text-align:center;color:white;font-size:19px;">Address: B-403, Namdev Smruti<br>
+    Nandivli Road, Near Swami<br>
+    Samarth Mandir, Dombivli East<br>
+    Mumbai, Maharashtra<br>
+    India-420312<br><br>
+    ☏ Phone: +918284723868<br>
+    ✉ Email: cleang@gmail.com</p>
+  </div>
+  <div class="columnb" style="background-color:#228B22;text-align:center;">
+      <br>
+    <h2 style="color:white;">◉ COME & GET SOCIAL WITH US! </h2>
+    <br>
+    <div class="footer-social-icons">
+    <h4 class="_14">Follow us on</h4>
+    <ul class="social-icons">
+        <li><a href="https://www.facebook.com/" class="social-icon" target="_blank"> <i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://twitter.com/" class="social-icon" target="_blank"> <i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/" class="social-icon" target="_blank"> <i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.youtube.com/" class="social-icon" target="_blank"> <i class="fab fa-youtube"></i></a></li>
+        <li><a href="https://www.linkedin.com/" class="social-icon" target="_blank"> <i class="fab fa-linkedin"></i></a></li>
+
+    </ul>
+</div>
+    </div>
+</div>
+
+
+
+<table class="bottom">
+  <tr style="background-color:#404040;" class="trbottom" >
+    <td><p style="text-align: center; color: white;font-size:1vw;">Copyright © 2020-Clean-G. All Rights Reserved. Made in INDIA.</p></td>
+  </tr>
+</table>
+
+</div>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 1000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+    </body>
+
+</html>

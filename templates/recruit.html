@@ -1,0 +1,221 @@
+{% extends "layout.html" %}
+
+{% block title %} Recruit {% endblock %}
+
+{% block main %}
+   <div class="container-order">
+  <img src="/static/images/top.jpg" alt="Notebook" style="width:100%;-webkit-filter: brightness(80%);filter:brightness(80%);">
+  <div class="content">
+    <h1>Namaste {{ session["name"] }} ! Join Us For Contributing </h1>
+    <p>We're at recruiting</p>
+  </div>
+</div>
+<br>
+<b style="color:green;font-size:25px;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;Available Job Posts </b><br>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+
+
+<div class="row-r" id="services" >
+  <div class="column-r">
+    <div class="card-r">
+      <h3>MARKETING MANAGER</h3>
+      <p>In recent times of Coronavirus, we provide<br> facilities to sanitize houses, and public<br> places at minimal cost.
+      so that everybody <br>stays safe in such critical situation.<br>Our people come in proper PPE kits,<br> along with
+      official IDs.</p>
+      <p><b>Average Salary: ₹30,000 - ₹40,000</b></p>
+      <p>For more info. Contact us on <a href="https://www.linkedin.com/" style="color:blue;">Linkedin</a></p>
+
+    </div>
+  </div>
+
+  <div class="column-r">
+    <div class="card-r">
+
+      <h3>SOFTWARE DEVELOPER</h3>
+       <p>Along with regular cleaning done on <br>the streets, we also provide services for <br>specific cleaning activities in locations<br> where you feel to be
+       cleaned. We strictly<br> monitor the activities to be<br> properly done.</p>
+       <p><b>Average Salary: ₹50,000 - ₹60,000</b></p>
+      <p>For more info. Contact us on <a href="https://www.linkedin.com/" style="color:blue;">Linkedin</a></p>
+    </div>
+  </div>
+
+  <div class="column-r">
+    <div class="card-r">
+
+      <h3>BLOGGER & PHOTOGRAPHER</h3>
+       <p>Taking care of animals on streets <br>is one of the prime responsibilty of<br> our organization. We have experiences<br> veterinarians for taking care of animals.<br>
+       You can request this service if<br> you find any injured animal.</p>
+       <p><b>Average Salary: ₹20,000 - ₹30,000</b></p>
+      <p>For more info. Contact us on <a href="https://www.linkedin.com/" style="color:blue;">Linkedin</a></p>
+    </div>
+  </div>
+
+
+</div>
+
+    </div>
+    <div class="carousel-item">
+      <div class="row-r" id="services">
+  <div class="column-r">
+    <div class="card-r">
+      <h3>ASSISTANT OFFICER</h3>
+      <p>In recent times of Coronavirus, we provide<br> facilities to sanitize houses, and public<br> places at minimal cost.
+      so that everybody <br>stays safe in such critical situation.<br>Our people come in proper PPE kits,<br> along with
+      official IDs.</p>
+      <p><b>Average Salary: ₹10,000 - ₹15,000</b></p>
+      <p>For more info. Contact us on <a href="https://www.linkedin.com/" style="color:blue;">Linkedin</a></p>
+
+    </div>
+  </div>
+
+  <div class="column-r">
+    <div class="card-r">
+
+      <h3>ACCOUNTANT</h3>
+       <p>Along with regular cleaning done on <br>the streets, we also provide services for <br>specific cleaning activities in locations<br> where you feel to be
+       cleaned. We strictly<br> monitor the activities to be<br> properly done.</p>
+       <p><b>Average Salary: ₹60,000 - ₹70,000</b></p>
+      <p>For more info. Contact us on <a href="https://www.linkedin.com/" style="color:blue;">Linkedin</a></p>
+    </div>
+  </div>
+
+  <div class="column-r">
+    <div class="card-r">
+
+      <h3>EVENTS MANAGER</h3>
+       <p>Taking care of animals on streets <br>is one of the prime responsibilty of<br> our organization. We have experiences<br> veterinarians for taking care of animals.<br>
+       You can request this service if<br> you find any injured animal.</p>
+       <p><b>Average Salary: ₹20,000 - ₹30,000</b></p>
+      <p>For more info. Contact us on <a href="https://www.linkedin.com/" style="color:blue;">Linkedin</a></p>
+    </div>
+  </div>
+
+
+</div>
+    </div>
+
+  </div>
+
+
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true">Previous</span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true">Next</span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<br>
+<hr><br>
+<b style="color:green;font-size:25px;" id="apply">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;Apply For A Job </b><br><br>
+
+<br>
+<form style="width:90%;margin: 0 auto;" action="/recruit" method="post">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault01">Full name</label>
+      <input type="text" class="form-control" id="validationDefault01" name="appname" placeholder="First Middle(if any) Last" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefault02">Phone Number</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">+91</span>
+        </div>
+        <input type="text" class="form-control" id="validationDefaultUsername"name="appphone" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationDefaultUsername">Email-ID</label>
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupPrepend2">@</span>
+        </div>
+        <input type="text" class="form-control" id="validationDefaultUsername" name="appemail" aria-describedby="inputGroupPrepend2" required>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="form-row">
+    <div class="col-md-6 mb-3">
+      <label for="validationDefault03">Job Preference</label>
+      <input type="text" class="form-control" id="validationDefault03" name="appjob" placeholder="Enter only one preference"required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault04">Linkedin Profile URL</label>
+      <input type="text" class="form-control" id="validationDefault02" name="appurl"  required>
+    </div>
+    <div class="col-md-3 mb-3">
+      <label for="validationDefault05">Identification Number</label>
+      <input type="text" class="form-control" id="validationDefault05" name="appidentity" placeholder="Passport No./Aadhar/PAN" required>
+    </div>
+  </div>
+  <br>
+  <b style="color:red">*</b> You must upload your CV and credentials to your LinkedIn profile.
+  <br>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="terms" id="check" name="checkbox" required>
+      <label class="form-check-label" for="invalidCheck2">
+        I agree to the <a href="#exampleModal" data-toggle="modal" data-target="#exampleModal" style="color: green;">terms & conditions</a>.
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Terms & Conditions</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="text-align:left;">
+        <ol>
+          <li>
+            The application will not be considered if there is any incomplete or wrong information.
+          </li>
+          <li>
+            The Linkedin URL must be accurate.
+          </li>
+          <li>
+            You will be emailed about the interview session after viewing your profile.
+          </li>
+          <li>
+             If you are asked to send your documents, you must send it within 2-3 days.
+          </li>
+
+          <li>
+            In case of any queries, contact us at cleangapply@gmail.com
+          </li>
+
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </label>
+    </div>
+  </div>
+  <br>
+  <button type="submit" class="btn btn-outline-success" >
+  Submit Form
+</button>
+
+</form>
+
+<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<b>If you have applied for a job, click here to <a href="/status" style="color:green">Check Status</a>.</b>
+<br><br>
+{% endblock %}

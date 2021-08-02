@@ -1,0 +1,140 @@
+{% extends "layout.html" %}
+
+{% block title %} Order {% endblock %}
+
+{% block main %}
+
+<div class="container-order">
+  <img src="/static/images/top.jpg" alt="Notebook" style="width:100%;-webkit-filter: brightness(80%);filter:brightness(80%);">
+  <div class="content">
+    <h1>Namaste {{ session["name"] }} ! Request A Order Now</h1>
+    <p>We're at your service</p>
+  </div>
+</div>
+<br>
+<br>
+<h1 style="color:green;">{{ message }} {{ amount }} </h1>
+
+
+<div style="text-align:center;"><b style="color:green;font-size:25px;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;Book A Service </b></div>
+<br><br>
+
+
+<div class="orderbox">
+<form action="/order" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">Full Name</label>
+      <input type="text" name="ordername" class="form-control" id="inputEmail4">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Contact</label>
+      <input type="text" class="form-control" name="ordercontact" id="inputPassword4" placeholder="Phone Number / Email Address">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAddress">Address</label>
+    <input type="text" class="form-control" id="inputAddress" name="orderadd1" placeholder="House Number, apartment or floor">
+  </div>
+  <div class="form-group">
+    <label for="inputAddress2">Address 2</label>
+    <input type="text" class="form-control" id="inputAddress2" name="orderadd2" placeholder="District, studio or nearby spots">
+  </div>
+  <div class="form-row">
+    Look out for exact address from the maps:
+    </div>
+
+  <div class="form-row">
+    <iframe class="responsive-iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d58601.378620507785!2d72.88811304097618!3d19.111673298520675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1603351901827!5m2!1sen!2sid" width="100%" height="300" frameborder="0" style="border: 3px green solid;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+<br>
+<br>
+
+  <fieldset>
+        <legend>Choose the services you want:</legend>
+
+    <p>
+        <label><input type="checkbox" name="ord" id="o1" value="Sanitization" onsubmit="greet(); return false;"/> Sanitization</label>
+        <label><input type="checkbox" name="ord" id="o2" value="Street Cleaning" onsubmit="greet(); return false;"/> Street Cleaning</label>
+        <label><input type="checkbox" name="ord" id="o3" value="Animal Protection" onsubmit="greet(); return false;"/> Animal Protection</label>
+        <label><input type="checkbox" name="ord" id="o4" value="Beach Cleaning" onsubmit="greet(); return false;"/> Beach Cleaning</label>
+        <label><input type="checkbox" name="ord" id="o5" value="Plant Trees" onsubmit="greet(); return false;"/> Plant Trees</label>
+        <label><input type="checkbox" name="ord" id="o6" value="Waste Collection" onsubmit="greet(); return false;"/> Waste Collection</label>
+    </p>
+
+    </fieldset>
+
+    <br>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputDate"><i class="fas fa-calendar-week"></i>Date</label><br>
+      <input type="text" id="day" name="orderdate" placeholder="dd/mm/YYYY" style="width:350px;padding: 3px 5px;border: 1px solid #c4c4c4;">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="inputState">Time</label>
+      <select id="inputState" name="ordertime" class="form-control">
+        <option value="Select your time preference..." selected>Select your time preference...</option>
+        <option value="9 a.m">9 a.m</option>
+        <option value="10 a.m">10 a.m</option>
+        <option value="11 p.m">11 p.m</option>
+        <option value="2 p.m">2 p.m</option>
+        <option value="4 p.m">4 p.m</option>
+      </select>
+    </div>
+
+  </div>
+
+
+
+
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="orderterms1" name="ordercheck" id="gridCheck" required>
+      <label class="form-check-label" for="gridCheck">
+        I agree to all <a href="#exampleModal" data-toggle="modal" data-target="#exampleModal" style="color: green;">terms & conditions</a>.
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Terms & Conditions</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <ol>
+          <li>
+            The Payment for the order should be done only after the officers complete their work and you are satisfied with it.
+          </li>
+          <li>
+            You can report any problem in the work only before 2 days after completion of order.
+          </li>
+          <li>
+            The details provided by you will not be provided to any external organization.
+          </li>
+          <li>
+            In case of any refund, contact us at cleang@gmail.com
+          </li>
+          <li>
+            Clean-G is not responsible for any fraud cases. Every employee from our organization has given a official ID.
+          </li>
+          <li>
+            It is advised to check the identity cards of every officer coming for your order.
+          </li>
+
+        </ol>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-outline-success">Book Now</button>
+</form>
+</div>
+{% endblock %}

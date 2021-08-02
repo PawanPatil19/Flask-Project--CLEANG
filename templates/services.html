@@ -1,0 +1,108 @@
+{% extends "layout.html" %}
+
+{% block title %} Services {% endblock %}
+
+{% block main %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Namaste {{ session["name"] }} !</h1>
+  <p class="lead">Contribute a step towards cleanliness and prevent our nation from degrading</p>
+  <hr class="my-4">
+  <p>Discover the services provided by CLEAN-G</p>
+  <a href="#services" ><button type="button" class="btn btn-success">Learn more</button></a>
+</div>
+<br>
+
+
+<div class="row-s" id="services">
+  <div class="column-s">
+    <div class="card-s">
+      <img src="/static/images/services/sanitize.png" alt="..." style="height:100px;width:100px;" class="center-s">
+      <h3>SANITIZATION</h3>
+      <p>In recent times of Coronavirus, we provide<br> facilities to sanitize houses, and public<br> places at minimal cost.
+      so that everybody <br>stays safe in such critical situation.<br>Our people come in proper PPE kits,<br> along with
+      official IDs.</p>
+      <p><a class="nav-link" href="/order#pane"><button type="button" class="btn btn-outline-success">Order a service</button></a></p>
+
+    </div>
+  </div>
+
+  <div class="column-s">
+    <div class="card-s">
+      <img src="/static/images/services/clean.png" alt="..." style="height:100px;width:100px;" class="center-s">
+      <h3>STREET CLEANING</h3>
+       <p>Along with regular cleaning done on <br>the streets, we also provide services for <br>specific cleaning activities in locations<br> where you feel to be
+       cleaned. We strictly<br> monitor the activities to be<br> properly done.</p>
+      <p><a class="nav-link" href="/order#pane"><button type="button" class="btn btn-outline-success">Order a service</button></a></p>
+    </div>
+  </div>
+
+  <div class="column-s">
+    <div class="card-s">
+      <img src="/static/images/services/animal.png" alt="..." style="height:100px;width:100px;" class="center-s">
+      <h3>ANIMAL PROTECTION</h3>
+       <p>Taking care of animals on streets <br>is one of the prime responsibilty of<br> our organization. We have experiences<br> veterinarians for taking care of animals.<br>
+       You can request this service if<br> you find any injured animal.</p>
+      <p><a class="nav-link" href="/order#pane"><button type="button" class="btn btn-outline-success">Order a service</button></a></p>
+    </div>
+  </div>
+
+
+</div>
+<br>
+<div class="row-s" >
+  <div class="column-s">
+    <div class="card-s">
+      <img src="/static/images/services/beach.png" alt="..." style="height:100px;width:150px;" class="center-s">
+      <h3>BEACH CLEANING</h3>
+       <p>With increasing waste on beaches,<br> we organize weekly cleaning schedules on <br>beaches. We are in constant contact with <br>inovative channels to bring out <br>technology to remove junk from beaches.<br>
+       You can join us too for preventing the oceans from breathing plastic.</p>
+      <p><a class="nav-link" href="/order#pane"><button type="button" class="btn btn-outline-success">Order a service</button></a></p>
+    </div>
+  </div>
+
+  <div class="column-s">
+    <div class="card-s">
+      <img src="/static/images/services/tree.png" alt="..." style="height:100px;width:100px;" class="center-s">
+      <h3>PLANTING TREES</h3>
+       <p>We show active part in planting trees <br>everyday at different location in cities. <br>For every ₹1, we plant a tree and hope <br>that people donate money and participate <br>in such a
+        noble cause. <br>Your help will make a difference.</p>
+      <p><a class="nav-link" href="/order#pane"><button type="button" class="btn btn-outline-success">Donate</button></a></p>
+    </div>
+  </div>
+
+  <div class="column-s">
+    <div class="card-s">
+      <img src="/static/images/services/garbage.png" alt="..." style="height:100px;width:100px;" class="center-s">
+      <h3>WASTE COLLECTION</h3>
+       <p>Taking care of hygiene within cities, <br>we also provide services for garbage collection.<br> Instead of the waste going to landfills, we<br> have sophisticated technology
+       to recycle<br> waste into eco-friendly products sold<br> on online platforms at lower cost.</p>
+      <p><a class="nav-link" href="/order#pane"><button type="button" class="btn btn-outline-success">Order a service</button></a></p>
+    </div>
+  </div>
+
+
+</div>
+
+<br><br><br><br>
+
+<div class="container-v">
+  <img src="/static/images/car.jpg" alt="Snow" style="width:70%; margin-right:auto;margin-left: 0;display:block;">
+
+  <div class="top-right">
+      <p style="color:black;font-size:3vw;font-family:helvetica;">We Use<br> Electric Vehicles.<br>
+      We Aim At Zero<br> Carbon Emmisions.</p>
+
+
+</div>
+
+<br>
+
+
+
+
+
+
+
+
+{% endblock %}

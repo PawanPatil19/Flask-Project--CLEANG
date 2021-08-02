@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %} History {% endblock %}
+
+{% block main %}
+
+<div class="container-order">
+  <img src="/static/images/top.jpg" alt="Notebook" style="width:100%;-webkit-filter: brightness(80%);filter:brightness(80%);">
+  <div class="content">
+    <h1>Namaste {{ session["name"] }} ! View Your Orders</h1>
+  </div>
+</div>
+
+<b style="color:green;font-size:25px;">&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;View Your Orders </b><br>
+<br>
+<br>
+<form action="/history" method="post">
+<button type="submit" class="btn btn-outline-success" >Check</button>
+</form>
+<br>
+<h1 style="color:green;">{{ message }} {{ amount }} </h1>
+<br>
+
+
+<div style="overflow-x:auto;width:75%;;margin:auto;">
+<table>
+  <tr>
+    <th>UserID</th>
+    <th>Order ID</th>
+    <th>Full Name</th>
+    <th>Contact</th>
+    <th>Order Address1</th>
+    <th>Order Address2</th>
+    <th>Order Date</th>
+    <th>Order Time</th>
+    <th>Order Type</th>
+    <th>Order Amount</th>
+    <th>Order Status</th>
+
+  </tr>
+  {% for row in rows %}
+  <tr>
+
+    <td >{{ row["userid"] }}</td>
+        <td>{{ row["order_id"] }}</td>
+        <td>{{ row["order_name"] }}</td>
+        <td>{{ row["order_contact"] }}</td>
+        <td>{{ row["order_address1"] }}</td>
+        <td>{{ row["order_address2"] }}</td>
+        <td>{{ row["order_date"] }}</td>
+        <td>{{ row["order_time"] }}</td>
+        <td>{{ row["order_type"] }}</td>
+        <td>{{ row["order_amount"] }}</td>
+        <td>{{ row["order_status"] }}</td>
+  </tr>
+  {% endfor %}
+
+
+</table>
+</div>
+
+
+
+{% endblock %}

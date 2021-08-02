@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+        <link href="/static/images/favicon.ico" rel="icon">
+        <link href="/static/login.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <title>Clean-G: Login</title>
+    </head>
+
+
+    <body style=" background-image: url('/static/images/533108.jpg');background-repeat: no-repeat;background-position: center center;background-attachment: fixed;background-size: cover;">
+
+
+ <div id="form_wrapper">
+            <div id="form_left">
+                <img src="/static/header.jpg" alt="computer icon" style="width:300px;">
+            </div>
+            <div id="form_right">
+                <b style="color:green;margin-bottom:1px;">{{ message }}</b>
+                <h1>Get along with us</h1>
+                <form action="/login" method="post">
+
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <i class="fas fa-user"></i>
+                    <input placeholder="Username" type="text" name="username" id="field_username" class='input_field'>
+
+                </div>
+                <div class="input_container"style="margin-bottom: 15px;">
+                    <i class="fas fa-lock"></i>
+                    <input  placeholder="Password" type="password" name="password" id="field_password" class='input_field'>
+
+                </div>
+                <input type="submit" value="Login" id='input_submit' class='input_field'>
+                </form>
+                <span><a href="/forgot">Forgot Password ?</a></span>
+
+                <span id='create_account'>
+                    <a href="/register
+                    ">Not Yet Registered ➡ </a>
+                </span>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://raw.githubusercontent.com/ysoftaoglu/GradientButtons/master/gradient-buttons/gradient-buttons.min.css"/>
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/images/favicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+        <link href="/static/button.css" rel="stylesheet">
+        <link href="/static/login.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script src="https://www.google.com/reCAPTCHA/api.js" async defer></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <title>Clean-G: Register</title>
+    </head>
+
+
+    <body style="background-image: url('/static/images/533108.jpg');background-repeat: no-repeat;background-position: center center;background-attachment: fixed;background-size: cover;">
+<div id="form_wrapper_re">
+   <div id="form_left">
+                <img src="/static/header.jpg" alt="computer icon" style="width:300px;"><br>
+
+            </div>
+
+            <div id="form_right">
+
+                <h1>Get along with us</h1>
+                <form action="/register" method="post">
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <i class="fas fa-bars"></i>
+                    <input placeholder="Enter Full Name" type="text" name="fname" id="field_name" class='input_field'>
+
+                </div>
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <i class="fas fa-envelope"></i>
+                    <input  placeholder="Enter your Email ID" type="email" name="email" id="field_email" class='input_field'>
+
+                </div>
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <i class="fas fa-phone"></i>
+                    <input  placeholder="Enter your Phone Number" type="integer" name="phone" id="field_phone" class='input_field'>
+
+                </div>
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <i class="fas fa-user"></i>
+                    <input placeholder="Create a username" type="text" name="username" id="field_user" class='input_field'>
+
+                </div>
+
+                <div style="margin-bottom: 15px;"><div style="margin-bottom: 15px;">
+
+                    <b style="color:red;">*</b>Password must contain atleast 8 characters including a letter and a number
+
+                </div>
+
+                    <b style="color:red;">*</b>Password must contain atleast 8 characters including a letter and a number
+
+                </div>
+
+                <div class="input_container" style="margin-bottom: 15px;">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="Create a password" type="password" name="password" id="field_pass" class='input_field'>
+
+                </div><div class="input_container" style="margin-bottom: 15px;">
+                    <i class="fas fa-lock"></i>
+                    <input placeholder="Re-enter password" type="password" name="repassword" id="field_repass" class='input_field'>
+
+                </div>
+
+                <input type="submit" value="Register" id='input_submit' class='input_field'>
+                </form>
+                <span id='create_account'>
+                    <a href="/login" style="color:green;">Login <i class="fas fa-sign-in-alt"></i></a>
+                </span>
+            </div>
+        </div>
+
+        <script>
+    // password validation, you can submit only if the pass is at least 8 characters and contains only alphanumeric characters
+        document.querySelector('#input_submit').disabled = true;
+        document.querySelector('#field_pass').onkeyup = function() {
+            let password = document.querySelector('#field_pass').value;
+
+            if (password.length > 7 && password.match(/^[0-9a-z]+$/i) && password.match(/\d/) && password.match(/[a-z]/i)){
+                document.querySelector('#input_submit').disabled = false;
+            }
+            else {
+                document.querySelector('#input_submit').disabled = true;
+            }
+        }
+    </script>
+
+    </body>
+</html>
